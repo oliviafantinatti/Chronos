@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171512">
+  <meta name="description" content="CHRONOS — Museum of Human History. Cada época guarda uma história. Cada história muda o futuro.">
+  <title>CHRONOS — Museum of Human History</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <div class="preloader" id="preloader"><span>C</span><small>BEYOND TIME</small></div>
+  <header class="header">
+    <a class="brand" href="#inicio"><span class="brand-mark">C</span><span><b>CHRONOS</b><small>MUSEUM OF HUMAN HISTORY</small></span></a>
+    <span class="header-est">EST. MMXXVI <i>·</i> BEYOND TIME</span>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"><span></span><span></span></button>
+  </header>
+  <nav class="menu" id="menu" aria-hidden="true">
+    <div class="menu-top">CHRONOS / NAVEGAÇÃO <button id="menuClose" aria-label="Fechar menu"><i data-lucide="x"></i></button></div>
+    <div class="menu-links">
+      <a href="#inicio"><small>01</small>Início</a><a href="#sobre"><small>02</small>O museu</a>
+      <a href="#linha-do-tempo"><small>03</small>Linha do tempo</a><a href="#exposicoes"><small>04</small>Exposições</a>
+      <a href="#acervo"><small>05</small>Acervo</a><a href="#visite"><small>06</small>Visite-nos</a>
+    </div>
+    <p>CADA ÉPOCA GUARDA UMA HISTÓRIA.</p>
+  </nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-bg"></div><div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span>MUSEUM OF HUMAN HISTORY<span></span></p>
+        <h1>O TEMPO NÃO<br><em>ESPERA.</em> A HISTÓRIA<br>PERMANECE.</h1>
+        <p class="hero-desc">Uma jornada pela história da humanidade, das primeiras civilizações às grandes transformações do mundo.</p>
+        <div class="hero-actions"><a class="btn btn-gold" href="#linha-do-tempo">EXPLORAR O MUSEU <i data-lucide="arrow-up-right"></i></a><a class="btn-link" href="#sobre">NOSSA HISTÓRIA <i data-lucide="arrow-down"></i></a></div>
+      </div>
+      <div class="hero-clock"><div class="clock-face"><span class="hand hour"></span><span class="hand minute"></span><span class="hand second"></span><span class="clock-dot"></span></div><small>TIME IS A STORY</small></div>
+      <div class="hero-foot"><span>SCROLL TO DISCOVER</span><i></i><span>01 / 06</span></div>
+    </section>
+
+    <section class="section intro" id="sobre">
+      <div class="section-no">01 <span>—</span> SOBRE O CHRONOS</div>
+      <div class="two-col">
+        <div><p class="eyebrow">MAIS QUE UM MUSEU</p><h2>O passado<br>nunca esteve<br><em>tão presente.</em></h2></div>
+        <div class="copy"><p class="lead">Toda grande história começa com um vestígio. Uma marca, um objeto, uma ideia que atravessa gerações.</p><p>O CHRONOS é um museu dedicado à preservação e à exploração da história da humanidade. Um espaço onde civilizações, descobertas e transformações se conectam para revelar como chegamos até aqui — e inspirar os caminhos que ainda vamos construir.</p><blockquote>“Conhecer o passado é compreender o presente e imaginar o futuro.”</blockquote><a class="under-link" href="#acervo">DESCUBRA NOSSO ACERVO <i data-lucide="arrow-up-right"></i></a></div>
+      </div>
+      <figure class="wide-image"><img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1800&q=85" alt="Interior de museu com obras de arte"><figcaption>MEMÓRIA É O QUE NOS CONECTA.</figcaption></figure>
+    </section>
+
+    <section class="section timeline" id="linha-do-tempo">
+      <div class="section-no">02 <span>—</span> LINHA DO TEMPO</div>
+      <div class="section-heading"><div><p class="eyebrow">UMA VIAGEM PELA HUMANIDADE</p><h2>Milênios em<br><em>movimento.</em></h2></div><p>Explore os grandes períodos que moldaram sociedades, ideias e o mundo como conhecemos.</p></div>
+      <div class="period-tabs" role="tablist">
+        <button class="period-tab active" data-period="pre">01 <span>Pré-História</span></button><button class="period-tab" data-period="antiga">02 <span>Idade Antiga</span></button><button class="period-tab" data-period="media">03 <span>Idade Média</span></button><button class="period-tab" data-period="moderna">04 <span>Idade Moderna</span></button><button class="period-tab" data-period="contemp">05 <span>Contemporânea</span></button>
+      </div>
+      <div class="period-panel"><div class="period-img" id="periodImage"></div><div class="period-copy"><small id="periodDate">2,5 MILHÕES A.C. — 3.500 A.C.</small><h3 id="periodTitle">Antes da<br><em>escrita.</em></h3><p id="periodText">Muito antes das primeiras cidades, nossos ancestrais aprenderam a dominar o fogo, criar ferramentas e registrar sua existência nas paredes das cavernas.</p><div class="period-foot"><span id="periodFact">O INÍCIO DE TUDO</span><span id="periodCount">01 / 05</span></div></div></div>
+    </section>
+
+    <section class="section exhibitions" id="exposicoes">
+      <div class="section-no">03 <span>—</span> EXPOSIÇÕES</div>
+      <div class="section-heading"><div><p class="eyebrow">HISTÓRIAS QUE MARCARAM ÉPOCAS</p><h2>Um mundo de<br><em>descobertas.</em></h2></div><a class="under-link" href="#visite">PLANEJE SUA VISITA <i data-lucide="arrow-up-right"></i></a></div>
+      <div class="exhibit-grid">
+        <article class="exhibit-card tall"><img src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1300&q=85" alt="Pirâmides do Egito"><div class="shade"></div><div class="exhibit-info"><small>01 / CIVILIZAÇÕES</small><h3>O nascimento<br>das civilizações</h3><button data-exhibit="civilizacoes">DESCOBRIR <i data-lucide="arrow-up-right"></i></button></div></article>
+        <article class="exhibit-card"><img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb?auto=format&fit=crop&w=1000&q=85" alt="Escultura clássica"><div class="shade"></div><div class="exhibit-info"><small>02 / PODER E CULTURA</small><h3>Os impérios<br>da Antiguidade</h3><button data-exhibit="imperios">DESCOBRIR <i data-lucide="arrow-up-right"></i></button></div></article>
+        <article class="exhibit-card"><img src="https://images.unsplash.com/photo-1455390582262-044cdej?auto=format&fit=crop&w=1000&q=85" alt="Manuscritos e conhecimento"><div class="shade"></div><div class="exhibit-info"><small>03 / CONHECIMENTO</small><h3>A revolução<br>científica</h3><button data-exhibit="ciencia">DESCOBRIR <i data-lucide="arrow-up-right"></i></button></div></article>
+        <article class="exhibit-card"><img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=1000&q=85" alt="Fotografias históricas"><div class="shade"></div><div class="exhibit-info"><small>04 / MEMÓRIA</small><h3>As grandes<br>guerras</h3><button data-exhibit="guerras">DESCOBRIR <i data-lucide="arrow-up-right"></i></button></div></article>
+        <article class="exhibit-card"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85" alt="Placa de circuito eletrônico"><div class="shade"></div><div class="exhibit-info"><small>05 / TRANSFORMAÇÃO</small><h3>O mundo<br>tecnológico</h3><button data-exhibit="tecnologia">DESCOBRIR <i data-lucide="arrow-up-right"></i></button></div></article>
+      </div>
+    </section>
+
+    <section class="manifesto"><img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=2000&q=85" alt=""><div class="manifesto-shade"></div><div class="manifesto-text"><p class="eyebrow">EVERY MOMENT TELLS A STORY</p><h2>Cada época guarda<br>uma história. Cada história<br><em>muda o futuro.</em></h2><small>CHRONOS · EST. MMXXVI</small></div></section>
+
+    <section class="section collection" id="acervo">
+      <div class="section-no">04 <span>—</span> ACERVO</div>
+      <div class="section-heading"><div><p class="eyebrow">FRAGMENTOS DO PASSADO</p><h2>O que o tempo<br><em>preservou.</em></h2></div><p>Objetos, documentos e descobertas que carregam marcas de outras vidas e outros tempos.</p></div>
+      <div class="filters"><button class="filter active" data-filter="todos">TODOS</button><button class="filter" data-filter="artefatos">ARTEFATOS</button><button class="filter" data-filter="documentos">DOCUMENTOS</button><button class="filter" data-filter="esculturas">ESCULTURAS</button></div>
+      <div class="collection-grid">
+        <button class="collection-item" data-category="artefatos" data-title="Vestígios de outras eras" data-full="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1800&q=90"><img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=800&q=80" alt="Artefato histórico"><span>ARTEFATOS<b>Vestígios de outras eras ↗</b></span></button>
+        <button class="collection-item" data-category="documentos" data-title="Palavras que atravessaram séculos" data-full="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1800&q=90"><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80" alt="Documento antigo"><span>DOCUMENTOS<b>Palavras que atravessaram séculos ↗</b></span></button>
+        <button class="collection-item" data-category="esculturas" data-title="A forma da memória" data-full="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1800&q=90"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=80" alt="Escultura em exposição"><span>ESCULTURAS<b>A forma da memória ↗</b></span></button>
+        <button class="collection-item" data-category="artefatos" data-title="A beleza do tempo" data-full="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1800&q=90"><img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=800&q=80" alt="Peça de museu"><span>ARTEFATOS<b>A beleza do tempo ↗</b></span></button>
+      </div>
+    </section>
+
+    <section class="section visit" id="visite">
+      <div class="section-no">05 <span>—</span> VISITE-NOS</div>
+      <div class="visit-grid"><div class="visit-copy"><p class="eyebrow">SUA PRÓXIMA VIAGEM COMEÇA AQUI</p><h2>O passado<br>espera por<br><em>você.</em></h2><p>Venha explorar histórias que atravessam séculos. Uma experiência para todas as gerações, no seu próprio ritmo.</p>
+        <div class="visit-details"><div><i data-lucide="map-pin"></i><span><b>LOCALIZAÇÃO</b><small>Av. Além do Tempo, 2026 · Centro Histórico</small></span></div><div><i data-lucide="clock-3"></i><span><b>HORÁRIOS</b><small>Ter a Dom · 10h às 18h</small></span></div><div><i data-lucide="ticket"></i><span><b>INGRESSOS</b><small>Entrada inteira R$ 40 · Meia R$ 20</small></span></div></div>
+      </div>
+      <form class="contact-form" id="contactForm"><p class="eyebrow">FALE CONOSCO</p><h3>Planeje sua<br><em>experiência.</em></h3>
+        <label for="name">SEU NOME</label><input id="name" name="name" placeholder="Como podemos chamar você?" required>
+        <label for="email">E-MAIL</label><input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required>
+        <label for="subject">ASSUNTO</label><select id="subject" name="subject"><option>Informações sobre visitação</option><option>Visita em grupo ou escolar</option><option>Acessibilidade</option><option>Outros assuntos</option></select>
+        <label for="message">MENSAGEM</label><textarea id="message" name="message" rows="3" placeholder="Escreva sua mensagem..." required></textarea>
+        <button class="btn btn-gold" type="submit">ENVIAR MENSAGEM <i data-lucide="arrow-up-right"></i></button><p class="form-feedback" id="formFeedback" aria-live="polite"></p>
+      </form></div>
+    </section>
+  </main>
+  <footer class="footer"><a class="brand" href="#inicio"><span class="brand-mark">C</span><span><b>CHRONOS</b><small>MUSEUM OF HUMAN HISTORY</small></span></a><p>CADA ÉPOCA GUARDA UMA HISTÓRIA.<br>CADA HISTÓRIA MUDA O FUTURO.</p><small>© 2026 CHRONOS MUSEUM · EST. MMXXVI</small></footer>
+
+  <div class="floating-clock"><div class="mini-clock"><span class="mini-hour"></span><span class="mini-minute"></span><span class="mini-second"></span></div><span id="digitalTime">00:00:00</span></div>
+  <div class="lightbox" id="lightbox"><button id="lightboxClose" aria-label="Fechar"><i data-lucide="x"></i></button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></div>
+  <div class="info-modal" id="infoModal"><div class="modal-box"><button id="modalClose" aria-label="Fechar"><i data-lucide="x"></i></button><small>CHRONOS / EXPOSIÇÃO</small><h3 id="modalTitle"></h3><p id="modalText"></p><a class="under-link" href="#visite">PLANEJE SUA VISITA <i data-lucide="arrow-up-right"></i></a></div></div>
+  <script src="js/main.js"></script><script src="js/timeline.js"></script><script src="js/interactions.js"></script>
+</body></html>

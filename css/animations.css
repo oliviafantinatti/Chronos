@@ -1,0 +1,6 @@
+/* Animações de entrada e movimento contínuo */
+@keyframes drift{from{transform:scale(1.04) translateX(0)}to{transform:scale(1.12) translateX(-1.5%)}}
+@keyframes second-hand{to{transform:rotate(360deg)}}
+.hand.second{animation:second-hand 60s linear infinite}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
